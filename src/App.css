@@ -1,0 +1,51 @@
+
+.user {
+  --w:450px;
+  --c:(100vw - var(--w));
+  
+  max-width:500px;
+  background:#dfe6eb;
+  margin:10px auto;
+  border-radius:10px;
+  overflow:hidden;
+  padding:0 20px 0 clamp(20px,var(--c)*1000,180px);
+  box-sizing:border-box;
+  box-shadow:1px 2px 5px #0005;
+  position:relative;
+}
+
+.user img {
+  position:absolute;
+  top:clamp(0px,var(--c)*-1000,10px);
+  left:clamp(0px,var(--c)*-1000,20px);
+  width:clamp(50px,var(--c)*1000,150px);
+  height:clamp(50px,var(--c)*1000,100%);
+  border-radius:clamp(0px,var(--c)*-1000,50px);
+  object-fit:cover;
+  object-position:top;
+}
+.user p {
+  margin:20px 0 10px clamp(0px,var(--c)*-1000,70px);
+  font-family: "Open sans", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  color: #333333;
+  font-size: 15px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Open sans", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #333333;
+}
