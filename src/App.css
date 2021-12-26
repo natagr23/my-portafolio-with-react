@@ -1,26 +1,41 @@
 
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 7px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  /* clear: both; */
+  display: table;
+}
+
+
 .user {
   --w:450px;
-  --c:(100vw - var(--w));
+  --c:(100vw);
   
   max-width:500px;
   background:#dfe6eb;
   margin:10px auto;
-  border-radius:10px;
+  border-radius:20px;
   overflow:hidden;
-  padding:0 20px 0 clamp(20px,var(--c)*1000,180px);
+  padding: 20px;
   box-sizing:border-box;
   box-shadow:1px 2px 5px #0005;
   position:relative;
 }
 
 .user img {
-  position:absolute;
+  position:relative;
   top:clamp(0px,var(--c)*-1000,10px);
   left:clamp(0px,var(--c)*-1000,20px);
   width:clamp(50px,var(--c)*1000,150px);
   height:clamp(50px,var(--c)*1000,100%);
-  border-radius:clamp(0px,var(--c)*-1000,50px);
+  border-radius:clamp(0px,var(--c)*1000,50px);
   object-fit:cover;
   object-position:top;
 }
@@ -49,3 +64,25 @@ h6,
   font-weight: 400;
   color: #333333;
 }
+
+
+/* 
+.researchgate {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  border: 3px solid #73AD21;
+  max-width:20px;
+}
+
+.researchgate img {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  border: 3px solid #73AD21;
+  max-width:20px;
+} */
+
+
