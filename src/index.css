@@ -5,15 +5,12 @@
 html {
   font-family: sans-serif;
 }
-
 body {
   margin: 0;
-background: #4ac4e2;
-/* background: linear-gradient(31deg, rgba(34,164,167,1) 0%, rgba(27,27,187,1) 27%, rgba(0,212,255,1) 100%); */
-  
+  background: #4ac4e2;
 }
 
-.home{
+.home {
   display: flex;
   justify-content: space-around;
   align-items: center;
