@@ -1,5 +1,6 @@
 import React from 'react';
 import { CustomContainer, CustomImg, CustomP } from './ProfileElements';
+import img_profile from '../assets/nata_photo.jpg';
 
 const Profile = (props) => {
   return (
@@ -27,10 +28,7 @@ const Profile = (props) => {
         </CustomP>
         <hr />
         <div className="d-flex justify-content-center">
-          <CustomImg
-            src="https://media-exp1.licdn.com/dms/image/C5603AQFlsFcPH_uzSA/profile-displayphoto-shrink_800_800/0/1534187932605?e=1645660800&v=beta&t=1JPDrvwaeLqUO6AQrCD3EnkERxIV0wdpS2FuuIOP1BY"
-            alt="user"
-          />
+          <CustomImg src={img_profile} alt="user" />
         </div>
         <hr />
         <div className="d-flex justify-content-center">
