@@ -177,4 +177,4 @@ const Work = (props) => {
     </div>
   );
 };
-ex
+export default Work;
