@@ -1,4 +1,3 @@
-import { CustomContainer } from './Profile/ProfileElements';
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import MobileStepper from '@material-ui/core/MobileStepper';
@@ -7,13 +6,14 @@ import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import Typography from '@material-ui/core/Typography';
 import { useTheme } from '@material-ui/core/styles';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
+import { CustomContainer, CustomImg, CustomP } from './Profile/ProfileElements';
+import Image from '../Components/Data/react.PNG';
 
 //testing slider
 const MyCollection = [
   {
     label: 'First Picture',
-    imgPath:
-      'https://media.geeksforgeeks.org/wp-content/uploads/20210208000010/1.png',
+    imgPath: Image,
   },
   {
     label: 'Second Picture',
@@ -93,86 +93,84 @@ const Work = (props) => {
               R
             </a>
           </button>
-        </CustomContainer>
-      </div>
-      <div
-        style={{
-          marginLeft: '40%',
-        }}
-      >
-        <h2>How to Create Image Slider in ReactJS?</h2>
-        <div
-          style={{
-            maxWidth: 400,
-            flexGrow: 1,
-          }}
-        >
-          <Paper
-            square
-            elevation={0}
-            style={{
-              height: 50,
-              display: 'flex',
-              paddingLeft: theme.spacing(4),
-              backgroundColor: theme.palette.background.default,
-              alignItems: 'center',
-            }}
-          >
-            <Typography>{MyCollection[index].label}</Typography>
-          </Paper>
-          <img
-            src={MyCollection[index].imgPath}
-            style={{
-              height: 255,
-              width: '100%',
-              maxWidth: 400,
-              display: 'block',
-              overflow: 'hidden',
-            }}
-            alt={MyCollection[index].label}
-          />
+          <div>
+            <CustomP>How to Create Image Slider in ReactJS?</CustomP>
+            <div
+              style={{
+                maxWidth: 1000,
+                flexGrow: 2,
+              }}
+            >
+              <Paper
+                square
+                elevation={0}
+                style={{
+                  height: 50,
+                  display: 'flex',
+                  paddingLeft: theme.spacing(4),
+                  backgroundColor: theme.palette.background.default,
+                  alignItems: 'center',
+                }}
+              >
+                <Typography>{MyCollection[index].label}</Typography>
+              </Paper>
 
-          <MobileStepper
-            variant="text"
-            position="static"
-            index={index}
-            steps={CollectionSize}
-            nextButton={
-              <Button
-                size="small"
-                onClick={goToNextPicture}
-                disabled={index === CollectionSize - 1}
-              >
-                Next
-                {theme.direction !== 'rtl' ? (
-                  <KeyboardArrowRight />
-                ) : (
-                  <KeyboardArrowLeft />
-                )}
-              </Button>
-            }
-          />
-          <MobileStepper
-            variant="text"
-            position="left"
-            index={index}
-            steps={CollectionSize}
-            nextButton={
-              <Button
-                size="small"
-                onClick={goToPreviousPicture}
-                disabled={index === CollectionSize + 1}
-              >
-                Previous
-                {theme.direction !== 'rtl' ? (
-                  <KeyboardArrowLeft />
-                ) : (
-                  <KeyboardArrowRight />
-                )}
-              </Button>
-            }
-          />
-        </div>
+              <img
+                src={MyCollection[index].imgPath}
+                style={{
+                  height: 255,
+                  width: '100%',
+                  maxWidth: 400,
+                  display: 'block',
+                  overflow: 'hidden',
+                }}
+                alt={MyCollection[index].label}
+              />
+
+              <MobileStepper
+                variant="text"
+                position="static"
+                index={index}
+                steps={CollectionSize}
+                nextButton={
+                  <Button
+                    size="small"
+                    onClick={goToNextPicture}
+                    disabled={index === CollectionSize - 1}
+                  >
+                    Next
+                    {theme.direction !== 'rtl' ? (
+                      <KeyboardArrowRight />
+                    ) : (
+                      <KeyboardArrowLeft />
+                    )}
+                  </Button>
+                }
+              />
+
+              <MobileStepper
+                variant="text"
+                position="left"
+                index={index}
+                steps={CollectionSize}
+                nextButton={
+                  <Button
+                    size="small"
+                    onClick={goToPreviousPicture}
+                    disabled={index === CollectionSize + 1}
+                  >
+                    Previous
+                    {theme.direction !== 'rtl' ? (
+                      <KeyboardArrowLeft />
+                    ) : (
+                      <KeyboardArrowRight />
+                    )}
+                  </Button>
+                }
+              />
+            </div>
+          </div>
+        </CustomContainer>
       </div>
     </div>
   );
