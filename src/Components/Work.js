@@ -7,23 +7,23 @@ import Typography from '@material-ui/core/Typography';
 import { useTheme } from '@material-ui/core/styles';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import { CustomContainer, CustomImg, CustomP } from './Profile/ProfileElements';
-import Image from '../Components/Data/react.PNG';
+import ImgReact from '../Components/Data/react.PNG';
+import ImgWordpress from '../Components/Data/wordpress.jpg';
+import ImgRstudio from '../Components/Data/RStudio.png';
 
 //testing slider
 const MyCollection = [
   {
-    label: 'First Picture',
-    imgPath: Image,
+    label: 'React Js',
+    imgPath: ImgReact,
   },
   {
     label: 'Second Picture',
-    imgPath:
-      'https://media.geeksforgeeks.org/wp-content/uploads/20210208000009/2.png',
+    imgPath: ImgWordpress,
   },
   {
     label: 'Third Picture',
-    imgPath:
-      'https://media.geeksforgeeks.org/wp-content/uploads/20210208000008/3.png',
+    imgPath: ImgRstudio,
   },
 ];
 
@@ -94,7 +94,7 @@ const Work = (props) => {
             </a>
           </button>
           <div>
-            <CustomP>How to Create Image Slider in ReactJS?</CustomP>
+            {/* <CustomP>How to Create Image Slider in ReactJS?</CustomP> */}
             <div
               style={{
                 maxWidth: 1000,
