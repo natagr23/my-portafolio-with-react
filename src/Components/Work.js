@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import { useTheme } from '@material-ui/core/styles';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import { CustomContainer, CustomImg, CustomP } from './Profile/ProfileElements';
+
 import ImgReact from '../Components/Data/react.PNG';
 import ImgWordpress from '../Components/Data/wordpress.jpg';
 import ImgRstudio from '../Components/Data/RStudio.png';
@@ -157,7 +158,7 @@ const Work = (props) => {
                   <Button
                     size="small"
                     onClick={goToPreviousPicture}
-                    disabled={index === CollectionSize + 1}
+                    disabled={index === 0}
                   >
                     Previous
                     {theme.direction !== 'rtl' ? (
